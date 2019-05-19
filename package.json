@@ -1,0 +1,11 @@
+{
+  "name": "tutorial-react-redux",
+  "version": "1.0.0",
+  "description": "Crash course tutorial in react with redux",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "itgumby",
+  "license": "MIT"
+}
