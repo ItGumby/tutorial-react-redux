@@ -1,0 +1,44 @@
+== React Redux Basic Tutorial
+
+https://react-redux.js.org/introduction/basic-tutorial
+https://redux.js.org/[recommended Redux patterns]
+
+=== Components
+
+* `TodoApp` container component rendering below:
+  ** `AddTodo` user form to enter/add item
+  ** `TodoList` renders list of todos
+  ** `Todo` renders single item
+  ** `VisibilityFilters` filter links: accepts `activeFilter` prop; dispatches `setFilter` actions
+* `constants` enum of filters
+* `index` renders app to the DOM
+* Redux https://redux.js.org/
+  ** *Store* the state
+  ** *Action Creators* components create actions affecting common state
+  ** *Reducers* ???
+  ** *Action Types* `actionTypes.js` to hold reusable constants of action types
+  ** *Selectors* gets data from store
+
+
+
+=== Notes
+
+* React hypes the "virtual dom" as the reason react is so fast
+* Components "look like" HTML templates (actually JSX)
+  ** components may contain `state`
+  ** may contain JS for functionality
+  ** must have `render()` method, typically `return ($HTML_JSX)` <= best to have single root element
+  ** JSX uses attribute `className` in place of `class` because it is reserved keyword in JS
+  ** `ReactDOM.render(<MyApp />, document.getElementById('app'));`
+  ** JSX render js in string: `<p>{ Math.random() * 10 }</p>`
+* CDN of react as core links: https://reactjs.org/docs/cdn-links.html
+  ** option for dev vs. production (minified) links
+  ** browser render babel:
+    *** `<script crossorigin src="https://unpkg.com/babel-standalone@6/bable.min.js></script>`
+    *** `<script type="text/babel">...class MyApp extends React.component {...} ...</script>`
+* VS Code Helper plugins
+  ** ES7 React/Redux/GraphQL snippets
+  ** Sublime Babel _syntax highlighting of JSX_
+  ** LiveServer to open code in browser
+* `src/redux/reducers/todos.js` heavily leverages ES6 deconstructor syntax `...XXX`
+* wrap `<TodoApp />` with `<Provider />` API provided by React Redux
