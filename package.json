@@ -2,14 +2,24 @@
   "name": "tutorial-react-redux",
   "version": "1.0.0",
   "description": "Crash course tutorial in react with redux",
-  "main": "index.js",
+  "keywords": [],
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "author": "itgumby",
   "license": "MIT",
   "dependencies": {
     "eslint": "^5.16.0",
-    "react-redux": "^7.0.3"
-  }
+    "classnames": "2.2.6",
+    "react": "16.4.2",
+    "react-dom": "16.4.2",
+    "react-redux": "5.0.7",
+    "react-scripts": "1.1.4",
+    "redux": "4.0.0"
+  },
+  "devDependencies": {}
 }
