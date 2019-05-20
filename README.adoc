@@ -1,6 +1,7 @@
 == React Redux Basic Tutorial
 
 https://react-redux.js.org/introduction/basic-tutorial
+
 https://redux.js.org/[recommended Redux patterns]
 
 === Components
@@ -12,12 +13,14 @@ https://redux.js.org/[recommended Redux patterns]
   ** `VisibilityFilters` filter links: accepts `activeFilter` prop; dispatches `setFilter` actions
 * `constants` enum of filters
 * `index` renders app to the DOM
-* Redux https://redux.js.org/
+* Redux https://redux.js.org/basics/basic-tutorial 
+  ** *Actions*
+  ** *Reducers*
   ** *Store* the state
-  ** *Action Creators* components create actions affecting common state
-  ** *Reducers* ???
-  ** *Action Types* `actionTypes.js` to hold reusable constants of action types
-  ** *Selectors* gets data from store
+  ** *Data Flow*
+  ** Other
+    *** *Action Types* `actionTypes.js` to hold reusable constants of action types
+    *** *Selectors* gets data from store
 
 
 
@@ -30,7 +33,7 @@ https://redux.js.org/[recommended Redux patterns]
   ** must have `render()` method, typically `return ($HTML_JSX)` <= best to have single root element
   ** JSX uses attribute `className` in place of `class` because it is reserved keyword in JS
   ** `ReactDOM.render(<MyApp />, document.getElementById('app'));`
-  ** JSX render js in string: `<p>{ Math.random() * 10 }</p>`
+  ** JSX render js in string: `<p>{ Math.random() * 10 }</p>` or `<p>My name is { this.state.name }</p>`
 * CDN of react as core links: https://reactjs.org/docs/cdn-links.html
   ** option for dev vs. production (minified) links
   ** browser render babel:
@@ -40,5 +43,6 @@ https://redux.js.org/[recommended Redux patterns]
   ** ES7 React/Redux/GraphQL snippets
   ** Sublime Babel _syntax highlighting of JSX_
   ** LiveServer to open code in browser
+* Chrome Extension: `React Developer Tools` ads "React" section in deve tools
 * `src/redux/reducers/todos.js` heavily leverages ES6 deconstructor syntax `...XXX`
 * wrap `<TodoApp />` with `<Provider />` API provided by React Redux
